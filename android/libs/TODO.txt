@@ -1,0 +1,1 @@
+在 @mufan/capacitor-plugin-alipay 中与这里都引入了 alipaysdk，后期优化一下
