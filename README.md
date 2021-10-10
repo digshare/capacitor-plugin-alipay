@@ -2,10 +2,12 @@
 
 An Alipay plugin for Capacitor
 
+Thanks to [capacitor-plugin-pay](https://github.com/veluxa/capacitor-plugin-pay)
+
 ## Install
 
 ```bash
-npm install capacitor-plugin-alipay
+npm install @mufan/capacitor-plugin-alipay
 npx cap sync
 ```
 
