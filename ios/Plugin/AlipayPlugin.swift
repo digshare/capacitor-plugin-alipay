@@ -8,11 +8,16 @@ import Capacitor
 @objc(AlipayPlugin)
 public class AlipayPlugin: CAPPlugin {
     private let implementation = Alipay()
-
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    
+    @objc func request(_ call: CAPPluginCall) {
+        let orderInfo = call.getString("orderInfo") ?? ""
+        
+        AlipaySDK.defaultService()?.payOrder(orderInfo, fromScheme: "alipay", callback: { (resultDic) in
+            print(resultDic as Any)
+            if let result = resultDic as NSDictionary? {
+                let resultStatus = result.value(forKey: "resultStatus") as! String
+                respondAlipay(resultStatus)
+            }
+        })
     }
 }

@@ -1,3 +1,12 @@
+export interface AlipayPluginRequestOptions {
+  orderInfo: string;
+}
+
+export interface AlipayPluginRequestResult {
+  code: string;
+  message: string;
+}
+
 export interface AlipayPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  request(options: AlipayPluginRequestOptions): Promise<AlipayPluginRequestResult>;
 }

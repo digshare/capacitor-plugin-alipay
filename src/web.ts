@@ -1,10 +1,9 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { AlipayPlugin } from './definitions';
+import type { AlipayPlugin, AlipayPluginRequestOptions } from './definitions';
 
 export class AlipayWeb extends WebPlugin implements AlipayPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
+  async request(options: AlipayPluginRequestOptions): Promise<any> {
     return options;
   }
 }

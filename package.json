@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-plugin-alipay",
+  "name": "@mufan/capacitor-plugin-alipay",
   "version": "0.0.1",
   "description": "An Alipay plugin for Capacitor",
   "main": "dist/plugin.cjs.js",

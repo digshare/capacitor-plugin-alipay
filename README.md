@@ -11,9 +11,46 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`request(...)`](#request)
+* [Interfaces](#interfaces)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### request(...)
+
+```typescript
+request(options: AlipayPluginRequestOptions) => any
+```
+
+| Param         | Type                                                                              |
+| ------------- | --------------------------------------------------------------------------------- |
+| **`options`** | <code><a href="#alipaypluginrequestoptions">AlipayPluginRequestOptions</a></code> |
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### AlipayPluginRequestOptions
+
+| Prop            | Type                |
+| --------------- | ------------------- |
+| **`orderInfo`** | <code>string</code> |
+
+
+#### AlipayPluginRequestResult
+
+| Prop          | Type                |
+| ------------- | ------------------- |
+| **`code`**    | <code>string</code> |
+| **`message`** | <code>string</code> |
+
 </docgen-api>

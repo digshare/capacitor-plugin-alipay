@@ -18,7 +18,7 @@ class AlipayTests: XCTestCase {
 
         let implementation = Alipay()
         let value = "Hello, World!"
-        let result = implementation.echo(value)
+        let result = implementation.request(value)
 
         XCTAssertEqual(value, result)
     }
