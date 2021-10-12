@@ -12,6 +12,7 @@
   "files": [
     "android/src/main/",
     "android/build.gradle",
+    "android/libs/",
     "dist/",
     "ios/Plugin/",
     "CapacitorPluginAlipay.podspec"
