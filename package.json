@@ -15,6 +15,7 @@
     "android/libs/",
     "dist/",
     "ios/Plugin/",
+    "ios/AlipaySDK.framework",
     "MufanCapacitorPluginAlipay.podspec"
   ],
   "author": "Chengdu Mufan Technology Co., Ltd.",
