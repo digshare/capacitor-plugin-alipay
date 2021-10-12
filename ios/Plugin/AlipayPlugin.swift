@@ -7,9 +7,13 @@ import Capacitor
  */
 @objc(AlipayPlugin)
 public class AlipayPlugin: CAPPlugin {
+    public static var lastCall: CAPPluginCall?
+    
     private let implementation = Alipay()
     
     @objc func request(_ call: CAPPluginCall) {
+        Self.lastCall = call
+        
         let orderInfo = call.getString("orderInfo") ?? ""
         
         AlipaySDK.defaultService()?.payOrder(orderInfo, fromScheme: "alipay", callback: { (resultDic) in

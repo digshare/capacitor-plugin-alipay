@@ -9,8 +9,6 @@
 import Foundation
 import Capacitor
 
-let call = CAPPluginCall();
-
 struct ResponseInfo {
     let code: String
     let success: Bool
@@ -29,7 +27,7 @@ let RESPONSE_INFOS = [
 
 public func respondAlipay(_ code: String) {
     guard let resultInfo = RESPONSE_INFOS.first(where: { info in info.code == code }) else {
-        call.reject("Unknown error")
+        AlipayPlugin.lastCall?.reject("Unknown error")
         return
     }
     
@@ -39,9 +37,9 @@ public func respondAlipay(_ code: String) {
             "message": resultInfo.message
         ]
         
-        call.resolve(result)
+        AlipayPlugin.lastCall?.resolve(result)
     } else {
-        call.reject(resultInfo.message, resultInfo.code)
+        AlipayPlugin.lastCall?.reject(resultInfo.message, resultInfo.code)
     }
     
 }
