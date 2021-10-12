@@ -15,7 +15,7 @@
     "android/libs/",
     "dist/",
     "ios/Plugin/",
-    "CapacitorPluginAlipay.podspec"
+    "MufanCapacitorPluginAlipay.podspec"
   ],
   "author": "Chengdu Mufan Technology Co., Ltd.",
   "license": "MIT",
