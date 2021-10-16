@@ -46,7 +46,7 @@ request(options: AlipayPluginRequestOptions) => any
 | Prop             | Type                |
 | ---------------- | ------------------- |
 | **`orderInfo`**  | <code>string</code> |
-| **`fromSchema`** | <code>string</code> |
+| **`fromScheme`** | <code>string</code> |
 
 
 #### AlipayPluginRequestResult
