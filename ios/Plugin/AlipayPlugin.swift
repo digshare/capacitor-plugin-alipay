@@ -15,8 +15,9 @@ public class AlipayPlugin: CAPPlugin {
         Self.lastCall = call
         
         let orderInfo = call.getString("orderInfo") ?? ""
+        let fromScheme = call.getString("fromScheme") ?? "alipay"
         
-        AlipaySDK.defaultService()?.payOrder(orderInfo, fromScheme: "alipay", callback: { (resultDic) in
+        AlipaySDK.defaultService()?.payOrder(orderInfo, fromScheme: fromScheme, callback: { (resultDic) in
             print(resultDic as Any)
             if let result = resultDic as NSDictionary? {
                 let resultStatus = result.value(forKey: "resultStatus") as! String

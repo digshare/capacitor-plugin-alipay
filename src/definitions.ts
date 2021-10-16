@@ -1,5 +1,6 @@
 export interface AlipayPluginRequestOptions {
   orderInfo: string;
+  fromSchema?: string;
 }
 
 export interface AlipayPluginRequestResult {
