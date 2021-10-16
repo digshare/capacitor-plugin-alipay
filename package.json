@@ -1,6 +1,6 @@
 {
   "name": "@mufan/capacitor-plugin-alipay",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An Alipay plugin for Capacitor",
   "publishConfig": {
     "access": "public"
